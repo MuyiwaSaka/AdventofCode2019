@@ -17,13 +17,19 @@ def run_magic_computer(fg):
             running = 0
         pstate = pstate + 4
     print machine
-    
+
 #Test The Machine using prior test data
 run_magic_computer("1,0,0,0,99") # validated
 run_magic_computer("2,3,0,3,99") # validated
 run_magic_computer("2,4,4,5,99,0") # validated
 run_magic_computer("1,1,1,4,99,5,6,0,99") # validated
+
+print("RUNNING MAIN CODE")
 h= open("day2input.txt","r")
 f= h.read()
 brkdwn = f.split(",")
+brkdwn[1]="12"
+brkdwn[2]="2"
+feed = ",".join([str(x) for x in brkdwn])
 
+run_magic_computer(feed)
