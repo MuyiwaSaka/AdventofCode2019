@@ -1,7 +1,6 @@
 import math
 
 def interprete_intcode(fg):
-    print("Input: {}".format(fg))
     machine = fg.split(",")
     pstate = 0
     running = 1
